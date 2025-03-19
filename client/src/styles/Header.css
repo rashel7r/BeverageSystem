@@ -1,0 +1,460 @@
+.header {
+    display: flex;
+    align-items: center;
+    padding: 1rem 4rem;
+    background: none;
+    box-shadow: none;
+    width: 100%;
+    position: relative;
+    z-index: 100;
+    margin-bottom: 2rem;
+}
+
+.customize-header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 4rem;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-bottom: 2rem;
+    min-height: 200px;
+}
+
+.customize-header-content {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    width: auto;
+    z-index: 1;
+    padding: 1rem;
+}
+
+.customize-header .back-button {
+    position: relative;
+    z-index: 2;
+}
+
+.cafe-logo {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.customize-beverage-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0;
+    background: white;
+}
+
+.customize-beverage-name {
+    margin: 0.5rem 0 0 0;
+    font-size: 1.5rem;
+    color: #2d3436;
+    text-align: center;
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+}
+
+.header-left {
+    display: none;
+}
+
+.header-right {
+    margin-left: auto;
+}
+
+.header-center {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.tea-icon {
+    font-size: 28px;
+    color: #666;
+}
+
+.motion-icon {
+    animation: tea-motion 3s ease-in-out infinite;
+    transform-origin: center bottom;
+    display: inline-block;
+}
+
+.cafe-name {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.cafe-name::before {
+    content: 'Cafe';
+    color: #D27B44;
+    margin-right: 4px;
+}
+
+.cafe-name::after {
+    content: 'Asipiya';
+    color: #666;
+}
+
+/* Hide the original text content */
+.cafe-name span {
+    display: none;
+}
+
+.nav-menu {
+    display: none;
+}
+
+.back-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: #e17055;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-button:hover {
+    background: #d15f45;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 1rem 2rem;
+    }
+    
+    .header-left {
+        padding-left: 1rem;
+    }
+
+    .nav-menu {
+        gap: 1.5rem;
+        margin-left: 0.5rem;
+    }
+
+    .nav-menu a {
+        font-size: 0.9rem;
+    }
+
+    .customize-beverage-image {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
+    
+    .customize-beverage-name {
+        font-size: 1.3rem;
+    }
+
+    .customize-header {
+        padding: 1.5rem 2rem;
+        width: 100%;
+        min-height: 180px;
+    }
+    
+    .customize-header .back-button {
+        left: 2rem;
+    }
+}
+
+@keyframes tea-motion {
+    0% {
+        transform: rotate(-5deg);
+        opacity: 0.7;
+    }
+    50% {
+        transform: rotate(5deg);
+        opacity: 0.9;
+    }
+    100% {
+        transform: rotate(-5deg);
+        opacity: 0.7;
+    }
+}
+
+.drink-icon-container {
+    position: relative;
+    display: inline-block;
+    padding-top: 0;
+    margin-top: -3px;
+    margin-right: -2px;
+}
+
+.drink-icon {
+    font-size: 24px;
+    color: #666;
+    display: inline-block;
+    animation: drink-wobble 3s ease-in-out infinite;
+    transform-origin: center bottom;
+}
+
+.steam-container {
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+}
+
+.steam {
+    position: absolute;
+    color: #666;
+    font-size: 20px;
+    opacity: 0;
+    transform: translateY(0) rotate(0deg);
+}
+
+.steam1 {
+    animation: steam-rise 2s ease-out infinite;
+    animation-delay: 0.2s;
+}
+
+.steam2 {
+    animation: steam-rise 2s ease-out infinite;
+    animation-delay: 0.6s;
+}
+
+.steam3 {
+    animation: steam-rise 2s ease-out infinite;
+    animation-delay: 1s;
+}
+
+@keyframes drink-wobble {
+    0% {
+        transform: rotate(-3deg);
+    }
+    50% {
+        transform: rotate(3deg);
+    }
+    100% {
+        transform: rotate(-3deg);
+    }
+}
+
+@keyframes steam-rise {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(-10px) rotate(15deg);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(-20px) rotate(30deg);
+        opacity: 0;
+    }
+}
+
+.cart-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 4rem;
+    background: white;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    width: 100%;
+    z-index: 100;
+    margin: 4rem 0 2rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    top: 0;
+}
+
+.cart-header .back-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #D27B44;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(210, 123, 68, 0.2);
+    margin-left: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.cart-header .back-button:hover {
+    background: #b86835;
+    transform: translateX(-2px);
+    box-shadow: 0 3px 6px rgba(210, 123, 68, 0.3);
+}
+
+.cart-header .page-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 0;
+    color: #333;
+    z-index: 1;
+    padding: 0.5rem 0;
+    width: 100%;
+    text-align: center;
+}
+
+.cart-page-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-right: 1rem;
+    position: relative;
+    z-index: 2;
+    margin-left: auto;
+    padding-right: 2rem;
+}
+
+.cart-page-logo .cafe-icon {
+    font-size: 1.8rem;
+}
+
+.cart-page-logo .cafe-name {
+    font-size: 1.5rem;
+    color: #666;
+    font-weight: 500;
+}
+
+.checkout-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 4rem;
+    background: white;
+    border-bottom: 1px solid #eee;
+    position: relative;
+}
+
+.checkout-header .page-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 0;
+    color: #333;
+}
+
+.checkout-header .back-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #D27B44;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(210, 123, 68, 0.2);
+}
+
+.checkout-header .back-button:hover {
+    background: #b86835;
+    transform: translateX(-2px);
+    box-shadow: 0 3px 6px rgba(210, 123, 68, 0.3);
+}
+
+@media (max-width: 768px) {
+    .checkout-header {
+        padding: 1rem;
+    }
+
+    .checkout-header .page-title {
+        font-size: 1.5rem;
+    }
+}
+
+.payment-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 4rem;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.payment-header .page-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 0;
+    color: #333;
+}
+
+.payment-header .back-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #D27B44;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(210, 123, 68, 0.2);
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+}
+
+.payment-header .back-button:hover {
+    background: #b86835;
+    transform: translateX(-2px);
+    box-shadow: 0 3px 6px rgba(210, 123, 68, 0.3);
+}
+
+@media (max-width: 768px) {
+    .payment-header {
+        padding: 1rem;
+    }
+    
+    .payment-header .page-title {
+        font-size: 1.5rem;
+    }
+}
+
+.payment-confirmation-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    background: none;
+    box-shadow: none;
+    margin-bottom: 2rem;
+} 

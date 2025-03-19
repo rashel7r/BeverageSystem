@@ -1,0 +1,356 @@
+.special-instructions-container {
+    padding: 1rem 2rem 1rem 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+    position: relative;
+    margin-top: 3rem;
+}
+
+.cafe-title {
+    position: absolute;
+    right: -8rem;
+    top: -7.5rem;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transform: translateX(-110px);
+}
+
+.back-button {
+    position: absolute;
+    left: 20px;
+    top: -40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cafe-icon {
+    font-size: 1.5rem;
+    margin-right: 4px;
+}
+
+.order-number-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.order-tabs {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.order-tabs button {
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    color: #666;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    position: relative;
+}
+
+.order-tabs button.active {
+    color: #D27B44;
+}
+
+.order-tabs button.active::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #D27B44;
+}
+
+.special-instructions-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #000;
+}
+
+.title-section {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    position: relative;
+}
+
+.title-with-number {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.title-with-number .special-instructions-title {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.title-with-number .order-number-circle {
+    position: static;
+    transform: none;
+}
+
+.instructions-content {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.order-info {
+    background: transparent;
+    border-radius: 0;
+    padding: 1rem 0;
+}
+
+.beverage-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+    padding: 0 0 1rem 1rem;
+}
+
+.beverage-info {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.beverage-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.beverage-section h3 {
+    font-size: 1.3rem;
+    color: #333;
+    margin: 0;
+    text-align: left;
+    align-self: center;
+}
+
+.status-dropdown {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    border: 1px solid #D27B44;
+    background-color: white;
+    color: #333;
+    font-size: 1rem;
+    cursor: pointer;
+    min-width: 120px;
+}
+
+.status-dropdown:focus {
+    outline: none;
+    border-color: #D27B44;
+    box-shadow: 0 0 0 2px rgba(210, 123, 68, 0.2);
+}
+
+.customize-section {
+    margin-bottom: 1rem;
+    padding: 0 0 1rem 1rem;
+    border: none;
+    border-radius: 0;
+    text-align: left;
+    background: transparent;
+    box-shadow: none;
+}
+
+.customize-section h4 {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.customize-details {
+    text-align: left;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+}
+
+.customize-details p {
+    color: #666;
+    margin: 0.5rem 0;
+    text-align: left;
+}
+
+.order-details {
+    margin-bottom: 1rem;
+    padding: 0 0 1rem 1rem;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem 0;
+    color: #666;
+}
+
+.instructions-section {
+    text-align: left;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.instructions-section h4 {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 1rem;
+    text-align: left;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+.instructions-details {
+    background: transparent;
+    border-radius: 0;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.instruction-category {
+    margin-bottom: 0.5rem;
+    text-align: left;
+    padding-bottom: 0;
+}
+
+.instruction-category:not(:last-child) {
+    border-bottom: none;
+}
+
+.instruction-category h5 {
+    color: #D27B44;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+.instruction-category ul {
+    list-style-type: none;
+    padding-left: 0;
+    text-align: left;
+}
+
+.instruction-category li {
+    color: #666;
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    text-align: left;
+}
+
+.instruction-category li::before {
+    content: '•';
+    position: absolute;
+    left: 0.5rem;
+    color: #D27B44;
+}
+
+@media (max-width: 768px) {
+    .special-instructions-container {
+        padding: 0.5rem;
+    }
+
+    .header-section {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .cafe-title {
+        position: absolute;
+        right: -8rem;
+        top: -7.5rem;
+        transform: translateX(-110px);
+    }
+
+    .order-number-circle {
+        position: static;
+        transform: none;
+        margin-top: 1rem;
+    }
+
+    .order-tabs {
+        position: static;
+        transform: none;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .instructions-content {
+        padding: 1rem;
+    }
+
+    .order-info {
+        padding: 1.5rem;
+    }
+
+    .beverage-section {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        text-align: left;
+        gap: 1rem;
+    }
+
+    .beverage-info {
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .beverage-image {
+        width: 80px;
+        height: 80px;
+    }
+
+    .instructions-section {
+        padding: 0.75rem;
+        border-radius: 6px;
+    }
+} 

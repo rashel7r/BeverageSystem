@@ -1,0 +1,23 @@
+/* Common styles shared across all pages */
+
+/* Common styles for back buttons across all pages */
+.back-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: #D27544;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(210, 123, 68, 0.2);
+}
+
+.back-button:hover {
+    background: #b86835;
+    box-shadow: 0 3px 6px rgba(210, 123, 68, 0.3);
+} 

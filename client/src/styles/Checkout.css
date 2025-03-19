@@ -1,0 +1,379 @@
+.checkout-page {
+    display: flex;
+    gap: 4rem;
+    padding: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    min-height: calc(100vh - 4rem);
+    width: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    color: rgb(33, 53, 71);
+    box-sizing: border-box;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.checkout-container {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 800px;
+    padding: 2rem;
+    margin-top: 1rem;
+}
+
+.checkout-container h2 {
+    color: #333;
+    margin: 0 0 2rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.order-summary {
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-bottom: 2rem;
+    margin-left: 2rem;
+}
+
+.drink-summary-card {
+    display: flex;
+    gap: 1.5rem;
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border: 1px solid #f0f0f0;
+    transition: all 0.2s ease;
+}
+
+.drink-summary-card:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+}
+
+.drink-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.drink-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.drink-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.drink-details h3 {
+    font-size: 1.25rem;
+    color: #333;
+    margin: 0;
+    font-weight: 500;
+}
+
+.drink-details p {
+    color: #666;
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.customizations {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.cart-summary-table {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    padding: 1.25rem;
+    width: 100%;
+    max-width: 380px;
+    height: fit-content;
+    position: sticky;
+    top: 2rem;
+    transition: all 0.2s ease;
+    margin-right: 2rem;
+}
+
+.table-header {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #eee;
+    font-weight: 500;
+    color: #333;
+}
+
+.table-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #eee;
+    color: #666;
+}
+
+.item-name {
+    font-weight: 500;
+    color: #333;
+}
+
+.item-qty, .item-price, .item-amount {
+    text-align: center;
+}
+
+.detail-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+    color: #666;
+    font-size: 1rem;
+}
+
+.detail-row span:first-child {
+    color: #333;
+    font-weight: 500;
+    text-align: left;
+    grid-column: 1;
+}
+
+.detail-row span:last-child,
+.detail-row .detail-value {
+    grid-column: 4;
+    text-align: center;
+}
+
+.detail-row.total-row {
+    border-bottom: none;
+    font-weight: 500;
+    color: #333;
+}
+
+.cart-summary-table .table-header span,
+.cart-summary-table .table-row span,
+.cart-summary-table .item-amount {
+    text-align: center;
+}
+
+.cart-summary-table .item-name {
+    text-align: left;
+}
+
+.total-row .detail-value {
+    font-weight: 500;
+}
+
+.payment-method-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-top: 0.75rem;
+    margin-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.payment-method-row span:first-child {
+    color: #333;
+    font-weight: 500;
+}
+
+.payment-select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #666;
+    background-color: white;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.payment-select:hover {
+    border-color: #D27B44;
+}
+
+.payment-select:focus {
+    border-color: #D27B44;
+    box-shadow: 0 0 0 2px rgba(210, 123, 68, 0.1);
+}
+
+.pay-button {
+    width: auto;
+    min-width: 120px;
+    margin: 1.5rem auto 0;
+    padding: 0.75rem 1.5rem;
+    background: #D27B44;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.pay-button:hover {
+    background: #b86835;
+    transform: translateY(-1px);
+}
+
+.pay-button svg {
+    font-size: 1.1rem;
+}
+
+.summary-section {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.spacer {
+    height: 1rem;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 1rem;
+}
+
+.cart-summary-table .table-header,
+.cart-summary-table .table-row,
+.detail-row {
+    position: relative;
+}
+
+.cart-summary-table .table-header span:first-child,
+.cart-summary-table .table-row span:first-child,
+.detail-row span:first-child {
+    position: relative;
+}
+
+.cart-summary-table .table-header span:first-child::after,
+.cart-summary-table .table-row span:first-child::after,
+.detail-row span:first-child::after {
+    content: none;
+    width: 0;
+    background: none;
+}
+
+@media (max-width: 1024px) {
+    .checkout-page {
+        padding: 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .order-summary,
+    .cart-summary-table {
+        max-width: 100%;
+        margin: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .checkout-page {
+        padding: 1rem;
+    }
+
+    .checkout-container {
+        padding: 1.5rem;
+    }
+
+    .order-summary {
+        margin-left: 0;
+    }
+
+    .drink-summary-card {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .drink-image {
+        width: 80px;
+        height: 80px;
+    }
+
+    .drink-details h3 {
+        font-size: 1.1rem;
+    }
+
+    .drink-details p {
+        font-size: 0.9rem;
+    }
+}
+
+.cart-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background: white;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.cart-header .back-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background: #E4794A;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 3px;
+    z-index: 2;
+    transform: translateY(-8px);
+}
+
+.cart-header .back-button:hover {
+    background: #d15f45;
+}
+
+.cart-header .page-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0;
+    color: #333;
+}
+
+.cart-header .cafe-title {
+    margin-left: auto;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.cart-header .cafe-title .emoji {
+    font-size: 1.4rem;
+    margin-right: 2px;
+} 

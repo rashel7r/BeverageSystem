@@ -1,0 +1,225 @@
+/* Inherit common styles from CoffeeMenu.css */
+.category-title {
+  border-bottom-color: #D27B44; /* Changed from purple to match new theme */
+}
+
+.beverage-item::before {
+  background: linear-gradient(to right, transparent, #D27B44, transparent);
+}
+
+.customize-button {
+  background-color: #D27B44;
+}
+
+.customize-button:hover {
+  background-color: #b86835;
+}
+
+.retry-button {
+  background-color: #D27B44;
+}
+
+/* Smoothie-specific styles */
+.beverage-item[data-category="smoothie"] .beverage-image {
+  background-color: rgba(210, 123, 68, 0.1);
+}
+
+.beverage-item[data-category="shake"] .beverage-image {
+  background-color: rgba(210, 123, 68, 0.05);
+}
+
+/* Featured image enhancements */
+.featured-image {
+  background: linear-gradient(135deg, #faf4f0, #fff);
+}
+
+@media (max-width: 768px) {
+  .featured-image {
+    height: 250px;
+  }
+}
+
+.navbar-container {
+  position: fixed;
+  top: -100px;
+  left: 2rem;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  transition: top 0.3s ease-in-out;
+}
+
+.navbar-container.visible {
+  top: 3.5rem;
+}
+
+.shakes-menu {
+  padding: 2rem;
+  padding-top: 4rem;
+  min-height: 100vh;
+  height: 100%;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  position: relative;
+  background: url('/images/shakes/Smoothie1.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  overflow: auto;
+}
+
+.shakes-menu::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.menu-content {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 12px;
+  position: relative;
+  z-index: 2;
+}
+
+.category-title {
+  font-size: 1.75rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.beverage-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.beverage-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  max-width: 100%;
+}
+
+.beverage-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.beverage-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.beverage-details {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.beverage-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.beverage-header h3 {
+  font-size: 1rem;
+  color: #333;
+  margin: 0;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.description {
+  color: #666;
+  font-size: 0.85rem;
+  line-height: 1.3;
+  margin: 0;
+  margin-bottom: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+.customize-button {
+  background: #D27B44;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.customize-button:hover {
+  background: #b86835;
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    left: 1rem;
+    top: 2rem;
+  }
+
+  .shakes-menu {
+    padding: 1rem;
+    padding-top: 4rem;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+  }
+
+  .menu-content {
+    padding: 0.25rem;
+    max-width: 100%;
+    margin: 0 1rem;
+  }
+
+  .beverage-list {
+    gap: 0.5rem;
+    max-width: 100%;
+  }
+
+  .beverage-item {
+    padding: 0.75rem;
+    gap: 0.75rem;
+  }
+
+  .beverage-image {
+    width: 50px;
+    height: 50px;
+  }
+} 
