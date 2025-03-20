@@ -136,7 +136,7 @@
 
 .navbar-container {
   position: fixed;
-  top: 3.5rem;
+  top: 1.5rem;
   left: 2rem;
   z-index: 1000;
   display: flex;
